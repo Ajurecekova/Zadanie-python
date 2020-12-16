@@ -65,5 +65,5 @@ def to_postfix(s):
             list2.append(k)
         else:
             list1.append(k)
-    "".join(list2)
+    return "".join(list2)
 
