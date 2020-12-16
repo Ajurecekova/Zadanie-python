@@ -23,7 +23,8 @@ def eval_expr(s,d={}):
                 a=d[k]
                 list.append(int(a))
             else:
-                list.append(k)
+                list.append(int(k))
+    return list.pop()
 
 
 def to_infix(s):
@@ -47,6 +48,7 @@ def to_infix(s):
             list.append('('+' '+b+' '+' '+k+' '+' '+a+' '+')')
         else:
             list.append(k)
+    return list.pop()
 
 def to_postfix(s):
     list1 = []
@@ -63,3 +65,5 @@ def to_postfix(s):
             list2.append(k)
         else:
             list1.append(k)
+    "".join(list2)
+
